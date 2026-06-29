@@ -54,6 +54,17 @@
       "rotate": 1.5,
       "zIndex": 5,
       "link": ""
+    },
+    {
+      "id": "06",
+      "image": "imgs/personalwork6.png",
+      "alt": "Personal work 06",
+      "x": 67,
+      "y": 50,
+      "width": 16,
+      "rotate": -2.5,
+      "zIndex": 5,
+      "link": ""
     }
   ]
 }
