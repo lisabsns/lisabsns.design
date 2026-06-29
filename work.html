@@ -2,7 +2,10 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
     <title>Personal Work — lisabsns.design</title>
     <meta name="description" content="Personal Work — lisabsns.design" />
     <link rel="icon" href="imgs/icon.svg" type="image/svg+xml" />
@@ -26,7 +29,11 @@
       <a href="work.html">PERSONAL WORK</a>
     </nav>
 
-    <section class="work-canvas" id="work-canvas" aria-label="Personal work"></section>
+    <section
+      class="work-canvas"
+      id="work-canvas"
+      aria-label="Personal work"
+    ></section>
 
     <main class="hero">
       <div class="hero__inner">
@@ -66,5 +73,44 @@
 
     <script src="js/drag-name.js"></script>
     <script src="js/personal-work.js"></script>
+
+    <!-- Мобильная прокрутка: гарантируем скролл колесом и пальцем (≤640px) -->
+    <script>
+      (function () {
+        if (!window.matchMedia("(max-width: 640px)").matches) return;
+        var canvas = document.getElementById("work-canvas");
+        if (!canvas) return;
+
+        // Мышь
+        canvas.addEventListener(
+          "wheel",
+          function (e) {
+            canvas.scrollTop += e.deltaY;
+            e.preventDefault();
+          },
+          { passive: false, capture: true },
+        );
+
+        // Палец
+        var startY = 0,
+          startTop = 0;
+        canvas.addEventListener(
+          "touchstart",
+          function (e) {
+            startY = e.touches[0].clientY;
+            startTop = canvas.scrollTop;
+          },
+          { passive: true, capture: true },
+        );
+        canvas.addEventListener(
+          "touchmove",
+          function (e) {
+            canvas.scrollTop = startTop - (e.touches[0].clientY - startY);
+            e.preventDefault();
+          },
+          { passive: false, capture: true },
+        );
+      })();
+    </script>
   </body>
 </html>
