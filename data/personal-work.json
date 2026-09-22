@@ -37,10 +37,10 @@
       "id": "04",
       "image": "imgs/personalwork4.jpg",
       "alt": "Personal work 04",
-      "x": 60,
-      "y": 38,
+      "x": 55,
+      "y": 40,
       "width": 14,
-      "rotate": -2,
+      "rotate": -2.7,
       "zIndex": 4,
       "link": ""
     },
@@ -59,11 +59,33 @@
       "id": "06",
       "image": "imgs/personalwork6.png",
       "alt": "Personal work 06",
-      "x": 67,
+      "x": 62,
       "y": 50,
       "width": 16,
       "rotate": -2.5,
-      "zIndex": 5,
+      "zIndex": 6,
+      "link": ""
+    },
+    {
+      "id": "07",
+      "image": "imgs/personalwork7.png",
+      "alt": "Personal work 07",
+      "x": 75,
+      "y": 10,
+      "width": 16,
+      "rotate": 3.5,
+      "zIndex": 7,
+      "link": ""
+    },
+    {
+      "id": "08",
+      "image": "imgs/personalwork8.png",
+      "alt": "Personal work 08",
+      "x": 75,
+      "y": 40,
+      "width": 16,
+      "rotate": -5,
+      "zIndex": 8,
       "link": ""
     }
   ]
